@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='UTF-8'?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is Metro/2.3.2-b608 (trunk-7979; 2015-01-21T12:50:19+0000) JAXWS-RI/2.2.11-b150120.1832 JAXWS-API/2.2.12 JAXB-RI/2.2.12-b141219.1637 JAXB-API/2.2.13-b141020.1521 svn-revision#unknown. --><xs:schema xmlns:tns="http://main/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://main/">
+
+<xs:element name="addRiver" type="tns:addRiver"/>
+
+<xs:element name="addRiverResponse" type="tns:addRiverResponse"/>
+
+<xs:element name="checkIfRiverExists" type="tns:checkIfRiverExists"/>
+
+<xs:element name="checkIfRiverExistsResponse" type="tns:checkIfRiverExistsResponse"/>
+
+<xs:element name="deleteRiver" type="tns:deleteRiver"/>
+
+<xs:element name="deleteRiverResponse" type="tns:deleteRiverResponse"/>
+
+<xs:element name="getAllRivers" type="tns:getAllRivers"/>
+
+<xs:element name="getAllRiversResponse" type="tns:getAllRiversResponse"/>
+
+<xs:element name="getRivers" type="tns:getRivers"/>
+
+<xs:element name="getRiversResponse" type="tns:getRiversResponse"/>
+
+<xs:element name="makeTeibutary" type="tns:makeTeibutary"/>
+
+<xs:element name="makeTeibutaryResponse" type="tns:makeTeibutaryResponse"/>
+
+<xs:element name="updateLength" type="tns:updateLength"/>
+
+<xs:element name="updateLengthResponse" type="tns:updateLengthResponse"/>
+
+<xs:complexType name="makeTeibutary">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="makeTeibutaryResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllRivers">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getAllRiversResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:river" minOccurs="0" maxOccurs="unbounded"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="river">
+<xs:sequence>
+<xs:element name="length" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteRiver">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteRiverResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="addRiver">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="addRiverResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="updateLength">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+<xs:element name="arg1" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateLengthResponse">
+<xs:sequence/>
+</xs:complexType>
+
+<xs:complexType name="getRivers">
+<xs:sequence>
+<xs:element name="arg0" type="xs:int"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getRiversResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkIfRiverExists">
+<xs:sequence>
+<xs:element name="arg0" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="checkIfRiverExistsResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"/>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
